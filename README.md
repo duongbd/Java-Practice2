@@ -18,11 +18,11 @@ Yêu cầu 1:
 
 Yêu Cầu 2 : Kiểm tra ràng buộc dữ liệu cho chương trình. Dữ liệu của các file input phải tuân thủ theo ràng buộc sau:
 
-– Họ tên sinh viên có chiều dài tối đa là 50 ký tự và tổi thiểu là 10 ký tự. Học viên cần tạo exception tương ứng có tên là InvalidFullNameException (1 điểm).
+– Họ tên sinh viên có chiều dài tối đa là 50 ký tự và tổi thiểu là 10 ký tự. Học viên cần tạo Exception tương ứng có tên là InvalidFullNameException (1 điểm).
 
-– Chương trình phải bắt được lỗi sai định dạng ngày tháng năm đối với trường doB. doB phải theo định dạng dd/MM/YYYY. Học viên cần tạo exception tương ứng có tên là InvalidDOBException (1 điểm).
+– Chương trình phải bắt được lỗi sai định dạng ngày tháng năm đối với trường doB. doB phải theo định dạng dd/MM/YYYY. Học viên cần tạo Exception tương ứng có tên là InvalidDOBException (1 điểm).
 
-– Số điện thoại: phải là chuỗi số có chiều dài 10 ký tự và phải bắt đầu bằng một trong các chuỗi số: 090, 098, 091, 031, 035 hoặc 038. Học viên cần tạo exception tương ứng có tên là InvalidPhoneNumberException (1 điểm).
+– Số điện thoại: phải là chuỗi số có chiều dài 10 ký tự và phải bắt đầu bằng một trong các chuỗi số: 090, 098, 091, 031, 035 hoặc 038. Học viên cần tạo Exception tương ứng có tên là InvalidPhoneNumberException (1 điểm).
 
 – Ngoài ra nếu có bất cứ một exception nào khác trong quá trình thực thi chương trình, thí sinh hãy thông báo ra màn hình nội dung “Input files have unknow errors !!!”  (0.5 điểm).
 
