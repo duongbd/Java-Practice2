@@ -1,0 +1,20 @@
+Nguyen Tran Hai-25/12/1999-Nam-0901234561-NUCE-Good-3.2-Khuyen khich NCKH cap bo
+Nguyen Ba Duong-06/12/1999-Nam-0906543212-NUCE-Good-2.83-Khuyen khich NCKH cap bo
+Nguyen Anh Hoang-12/01/1999-Nam-0905674563-NUCE-Normal-450-5
+Phan Van Hieu-23/05/1999-Nam-0901234564-NUCE-Good-2.9-Khong co
+Tran Thi Hong-12/03/1999-Nu-0915677895-NUCE-Good-3.2-Nhi NCKH cap truong
+Pham Thai Thanh Lam-23/07/1999-Nam-0986782346-NUCE-Normal-600-3
+Nguyen Van A-12/08/1999-Nam-0986782347-FTU-Normal-500-6
+Nguyen Tu B-12/08/1999-Nam-0986782348-FTU-Normal-800-7
+Nguyen Do Do-16/12/1999-Nam-0900543219-FTU-Good-3.0-Khong co
+Nguyen Duc Linh-16/02/1999-Nu-0900521210-NEU-Good-2.5-Khong co
+Nguyen Tran H-25/12/1999-Nam-0901234561-NUCE-Good-3.0-Khong co
+Nguyen Ba N-06/12/1999-Nam-0906543212-NUCE-Good-3.1-Khuyen khich NCKH cap bo
+Nguyen Anh Vy-12/01/1999-Nu-0908974563-NUCE-Normal-450-5
+Phan Van Anh-23/05/1991-Nam-0901234564-HUST-Good-2.9-Khong co
+Tran Thi K-12/03/1999-Nam-0915607895-NUCE-Good-3.3-Nhi NCKH cap truong
+Pham Thai Thanh Linh-23/07/2001-Nu-0986782346-NUCE-Normal-800-8
+Nguyen Van Fi-02/08/1999-Nam-0986782347-FTU-Normal-5550-6
+Nguyen Tu Binh-12/08/1989-Nam-0980782348-NUCE-Normal-600-7
+Nguyen Duc Dong-16/12/1996-Nam-0900303219-FTU-Good-3.1-Khong co
+Nguyen Duc Linh-16/02/1989-Nu-0908921210-NEU-Good-2.91-Khong co
