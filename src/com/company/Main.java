@@ -49,95 +49,106 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         readInput();
-
         Scanner scanner = new Scanner(System.in);
-        String value = (scanner.nextLine());
-        switch (value) {
-            case "sort tang dan":
-                studentList.sort(Comparator.comparing(Student::getPhoneNumber));
-                for (Student student : studentList) {
-                    student.showMyInfor();
-                }
-                break;
-            case "sort giam dan":
-                studentList.sort(new Comparator<Student>() {
-                    @Override
-                    public int compare(Student o1, Student o2) {
-                        return o1.getFullName().compareTo(o2.getFullName());
-                    }
-                });
-                for (Student student : studentList
-                ) {
-                    student.showMyInfor();
-                }
-                break;
-            case "11":
-            case "12":
-            case "13":
-            case "14":
-            case "15":
-                int count = Integer.parseInt(value);
-                if (count >= studentList.size()) {
+        boolean endProgram = false;
+        while (!endProgram) {
+            System.out.print("Program>");
+            String value = (scanner.nextLine());
+            switch (value) {
+                case "sortAscending":
+                    studentList.sort(Comparator.comparing(Student::getPhoneNumber));
                     for (Student student : studentList) {
                         student.showMyInfor();
                     }
-                } else {
-                    List<Student> officialList = new ArrayList<>();
-                    List<GoodStudent> subListGood = new ArrayList<>();
-                    List<NormalStudent> subListNormal = new ArrayList<>();
-                    for (Student student : studentList) {
-                        if (student.getGradeLevel().toLowerCase().equals("good"))
-                            subListGood.add((GoodStudent) student);
-                        else subListNormal.add((NormalStudent) student);
+                    break;
+                case "sortDescending":
+                    studentList.sort(new Comparator<Student>() {
+                        @Override
+                        public int compare(Student o1, Student o2) {
+                            return o1.getFullName().compareTo(o2.getFullName());
+                        }
+                    });
+                    for (Student student : studentList
+                    ) {
+                        student.showMyInfor();
                     }
-                    if (count < subListGood.size()) {
-                        subListGood.sort((o1, o2) -> {
-                            if (o1.getGpa() < o2.getGpa()) {
-                                return -1;
-                            } else if (o1.getGpa() == o2.getGpa()) {
-                                return (o2.getFullName().toLowerCase().compareTo(o1.getFullName().toLowerCase()));
-                            } else {
-                                return 1;
-                            }
-                        });
-                        Collections.reverse(subListGood);
-                        while (count != subListGood.size()) {
-                            subListGood.remove(subListGood.size() - 1);
-                        }
-                        for (Student student : subListGood) {
-                            student.showMyInfor();
-                        }
-                    } else if (count == subListGood.size()) {
-                        for (Student student : subListGood) {
+                    break;
+                case "11":
+                case "12":
+                case "13":
+                case "14":
+                case "15":
+                    int count = Integer.parseInt(value);
+                    if (count >= studentList.size()) {
+                        for (Student student : studentList) {
                             student.showMyInfor();
                         }
                     } else {
-                        subListNormal.sort(new Comparator<NormalStudent>() {
-                            @Override
-                            public int compare(NormalStudent o1, NormalStudent o2) {
-                                if (o1.getEnglishScore() < o2.getEnglishScore()) {
+                        List<Student> officialList = new ArrayList<>();
+                        List<GoodStudent> subListGood = new ArrayList<>();
+                        List<NormalStudent> subListNormal = new ArrayList<>();
+                        for (Student student : studentList) {
+                            if (student.getGradeLevel().toLowerCase().equals("good"))
+                                subListGood.add((GoodStudent) student);
+                            else subListNormal.add((NormalStudent) student);
+                        }
+                        if (count < subListGood.size()) {
+                            subListGood.sort((o1, o2) -> {
+                                if (o1.getGpa() < o2.getGpa()) {
                                     return -1;
-                                } else if (o1.getEnglishScore() == o2.getEnglishScore()) {
+                                } else if (o1.getGpa() == o2.getGpa()) {
                                     return (o2.getFullName().toLowerCase().compareTo(o1.getFullName().toLowerCase()));
                                 } else {
                                     return 1;
                                 }
+                            });
+                            Collections.reverse(subListGood);
+                            while (count != subListGood.size()) {
+                                subListGood.remove(subListGood.size() - 1);
                             }
-                        });
-                        Collections.reverse(subListNormal);
-                        for (Student student : subListGood) {
-                            student.showMyInfor();
-                        }
-                        int sub = count - subListGood.size();
-                        for (int i = 0; i < sub; i++) {
-                            subListNormal.get(i).showMyInfor();
+                            for (Student student : subListGood) {
+                                student.showMyInfor();
+                            }
+                        } else if (count == subListGood.size()) {
+                            for (Student student : subListGood) {
+                                student.showMyInfor();
+                            }
+                        } else {
+                            subListNormal.sort(new Comparator<NormalStudent>() {
+                                @Override
+                                public int compare(NormalStudent o1, NormalStudent o2) {
+                                    if (o1.getEnglishScore() < o2.getEnglishScore()) {
+                                        return -1;
+                                    } else if (o1.getEnglishScore() == o2.getEnglishScore()) {
+                                        return (o2.getFullName().toLowerCase().compareTo(o1.getFullName().toLowerCase()));
+                                    } else {
+                                        return 1;
+                                    }
+                                }
+                            });
+                            Collections.reverse(subListNormal);
+                            for (Student student : subListGood) {
+                                student.showMyInfor();
+                            }
+                            int sub = count - subListGood.size();
+                            for (int i = 0; i < sub; i++) {
+                                subListNormal.get(i).showMyInfor();
+                            }
                         }
                     }
-                }
-                break;
-            default:
-                System.out.println("Wrong type value");
-                break;
+                    break;
+                case "help":
+                    System.out.println("sortAscending       :to sort ascending ");
+                    System.out.println("sortDescending      :to sort descending  ");
+                    System.out.println("Type 11-15 to confirm the number of people passed");
+                    break;
+                case "quit":
+                    endProgram = true;
+                    break;
+                default:
+                    System.out.println("Wrong type value");
+                    break;
+            }
         }
     }
 }
